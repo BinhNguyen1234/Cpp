@@ -3,12 +3,13 @@
 #include "test.h"
 #include "LinkedList.h"
 #include <iostream>
-
+using namespace BinhDSA;
 int main()
 {
-    std::cout << "Hello World!\n";
-    intTest();
-    LinkeddList* a = new LinkeddList(4);
+    LinkedList* a = new LinkedList(4);
+    Node* b = new Node(5);
+    std::cout << a << std::endl;
+    std::cout << &a->head;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
