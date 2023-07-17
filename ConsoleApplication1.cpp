@@ -8,8 +8,7 @@ int main()
 {
     std::cout << "Hello World!\n";
     intTest();
-    Node* a = new Node(4);
-
+    LinkeddList* a = new LinkeddList(4);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
