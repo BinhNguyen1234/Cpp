@@ -6,5 +6,5 @@ void LinkedList::PrintHeadValue() {
 }
 void LinkedList::InsertAtFirst(Node* node) {
 	node->next = LinkedList::head;
-	LinkedList::head = node;
+	this->head = node;
 };

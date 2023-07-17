@@ -19,7 +19,7 @@ class LinkedList {
 			this->head = new Node(data);
 		};
 		void PrintHeadValue();
-		void InsertAtFirst(Node*);
+		void InsertAtFirst(Node* node);
 };
 }
 #endif
