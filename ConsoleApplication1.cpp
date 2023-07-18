@@ -6,12 +6,28 @@
 using namespace BinhDSA;
 int main()
 {
-    int ttt;
-    std::cout << &ttt << std::endl;
-    std::cout << sizeof(LinkedList) << std::endl;
     LinkedList* a = new LinkedList(4);
-    Node* b = new Node(5);
-    a->InsertAtFirst(b);
+    Node* ten = new Node(10);
+    Node* eleven = new Node(11);
+    Node* twelve = new Node(12);
+    Node* thirdteen = new Node(13);
+    Node* fourteen = new Node(14);
+    Node* fifteen = new Node(15);
+    Node* sixteen = new Node(16);
+    a->PushValue(5);
+    a->PushValue(6);
+    a->PushValue(7);
+    a->PushValue(8);
+    a->PushValue(9);
+    a->PushValue(ten);
+    a->PushValue(eleven);
+    a->PushValue(twelve);
+    a->PushValue(thirdteen);
+    a->PushValue(fourteen);
+    a->PushValue(fifteen);
+    a->PushValue(sixteen);
+    a->PrintAllValue();
+    std::cout << "ok";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

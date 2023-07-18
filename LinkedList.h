@@ -14,14 +14,23 @@ struct Node {
 
 class LinkedList {
 	public:
+		Node* curNode = nullptr;
 		Node* head = nullptr;
+		Node* tail = nullptr;
 		LinkedList(int data) {
-			this->head = new Node(data);
+			this->curNode = new Node(data);
+			this->head = curNode;
 		};
+		void AddNode(Node*);
 		void PrintHeadValue() {
 			std::cout << this->head;
 		};
+		void PrintAllValue();
+		Node* findValue(int);
+		void PushValue(int);
+		void PushValue(Node*);
 		void InsertAtFirst(Node* node);
+
 };
 }
 #endif
