@@ -2,7 +2,7 @@
 #include <iostream>
 #ifndef LINKED_LIST_H // ifndef refer to short hand of "if nOT defINE"
 #define LINKED_LIST_H
-
+#include <ios>
 namespace BinhDSA {
 struct Node {
 	int data;
@@ -18,7 +18,9 @@ class LinkedList {
 		LinkedList(int data) {
 			this->head = new Node(data);
 		};
-		void PrintHeadValue();
+		void PrintHeadValue() {
+			std::cout << this->head;
+		};
 		void InsertAtFirst(Node* node);
 };
 }

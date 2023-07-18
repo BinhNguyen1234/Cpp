@@ -6,14 +6,12 @@
 using namespace BinhDSA;
 int main()
 {
+    int ttt;
+    std::cout << &ttt << std::endl;
+    std::cout << sizeof(LinkedList) << std::endl;
     LinkedList* a = new LinkedList(4);
     Node* b = new Node(5);
-    std::cout << a << std::endl;
-    std::cout << a->head->data << std::endl;
-    std::cout << &a->head << std::endl;
     a->InsertAtFirst(b);
-    std::cout << a->head->data << std::endl;
-    std::cout << &a->head<< std::endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
