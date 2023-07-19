@@ -37,3 +37,27 @@ void LinkedList::PrintAllValue() {
 		current = current->next;
 	}
 }
+int LinkedList::CountNode(LinkedList* LinkedList) {
+	if (LinkedList->head == nullptr) {
+		return 0;
+	}
+	int count = 0;
+	Node* curNode = LinkedList->head;
+	while (curNode != nullptr) {
+		count++;
+		curNode = curNode->next;
+	}
+	return count;
+}
+int LinkedList::Count() {
+	if (this->head == nullptr) {
+		return 0;
+	}
+	Node* curNode = this->head;
+	int count = 0;
+	while (curNode != nullptr) {
+		count++;
+		curNode = curNode->next;
+	}
+	return count;
+}

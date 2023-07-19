@@ -30,6 +30,8 @@ class LinkedList {
 		void PushValue(int);
 		void PushValue(Node*);
 		void InsertAtFirst(Node* node);
+		int Count();
+		static int CountNode(LinkedList*);
 
 };
 }
