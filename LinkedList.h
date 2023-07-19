@@ -31,6 +31,10 @@ class LinkedList {
 		void PushValue(Node*);
 		void InsertAtFirst(Node* node);
 		int Count();
+		void DeleteValue(int);
+		void DeleteValue(Node*);
+		bool IsExist(int);
+		bool IsExist(Node*);
 		static int CountNode(LinkedList*);
 
 };

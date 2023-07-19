@@ -61,3 +61,23 @@ int LinkedList::Count() {
 	}
 	return count;
 }
+bool LinkedList::IsExist(int value) {
+	if (this->findValue(value) != nullptr) {
+		return true;
+	}
+	
+	return false;
+}
+bool LinkedList::IsExist(Node* value) {
+	if (this->head == nullptr) {
+		return false;
+	}
+	Node* node = this->head;
+	while (node!= nullptr) {
+		if (value == node) {
+			return true;
+		}
+		node = node->next;
+	}
+	return false;
+}

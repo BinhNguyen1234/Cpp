@@ -27,8 +27,8 @@ int main()
     a->PushValue(fifteen);
     a->PushValue(sixteen);
     a->PrintAllValue();
-    int length = a->Count();
-    std::cout << "Length: " << length << std::endl;
+    bool test = a->IsExist(sixteen);
+    std::cout << "test: " << test << std::endl;
     std::cout << "ok";
 }
 
