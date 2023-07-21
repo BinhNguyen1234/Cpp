@@ -82,15 +82,8 @@ bool LinkedList::IsExist(Node* value) {
 	return false;
 }
 void LinkedList::DeleteFirstValue(int value) {
-	Node* curNode = this->head;
-	while (curNode != nullptr && curNode->next != nullptr ) {
-		if (curNode->next->data == value ) {
-			Node* afterNode = curNode->next->next;
-			curNode->next->next = nullptr;
-			curNode->next = afterNode;
-		}
-		curNode = curNode->next;
-	}
+	Node** BeforeAfter = this->GetBeforeAndAfterValue(value);
+	BeforeAfter[0]->next = BeforeAfter[1];
 }
 Node** LinkedList::GetBeforeAndAfterNode(Node* node) {
 	Node* beforeAfter[2];
@@ -106,6 +99,21 @@ Node** LinkedList::GetBeforeAndAfterNode(Node* node) {
 	}
 	return beforeAfter;
 }
+Node** LinkedList::GetBeforeAndAfterValue(int value) {
+	Node* beforeAfter[2];
+	Node* curNode = this->head;
+	while (curNode != nullptr && curNode->next != nullptr) {
+		if (curNode->next->data == value) {
+			Node* afterNode = curNode->next->next;
+			beforeAfter[0] = curNode;
+			beforeAfter[1] = afterNode;
+			return beforeAfter;
+		}
+		curNode = curNode->next;
+	}
+	return beforeAfter;
+}
 void LinkedList::DeleteNode(Node* node) {
-
+	Node** beforeAfter = this->GetBeforeAndAfterNode(node);
+	beforeAfter[0]->next = beforeAfter[1];
 }

@@ -27,7 +27,7 @@ int main()
     a->PushValue(fourteen);
     a->PushValue(fifteen);
     a->PushValue(sixteen);
-    a->DeleteFirstValue(12);
+    a->DeleteNode(twelve);
     a->PrintAllValue();
     Node** test = a->GetBeforeAndAfterNode(thirdteen);
     std::cout << "test: " << test[0]->data << std::endl;

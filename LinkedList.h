@@ -39,6 +39,7 @@ class LinkedList {
 		bool IsExist(Node*);
 		static int CountNode(LinkedList*);
 		Node** GetBeforeAndAfterNode(Node*);
+		Node** GetBeforeAndAfterValue(int);
 
 };
 }
