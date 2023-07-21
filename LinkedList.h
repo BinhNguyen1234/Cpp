@@ -11,7 +11,9 @@ struct Node {
 		this->data = data;
 	};
 };
-
+struct BeforeAfterNode {
+	Node* BeforeAfter[2];
+};
 class LinkedList {
 	public:
 		Node* curNode = nullptr;
@@ -31,11 +33,12 @@ class LinkedList {
 		void PushValue(Node*);
 		void InsertAtFirst(Node* node);
 		int Count();
-		void DeleteValue(int);
-		void DeleteValue(Node*);
+		void DeleteFirstValue(int);
+		void DeleteNode(Node*);
 		bool IsExist(int);
 		bool IsExist(Node*);
 		static int CountNode(LinkedList*);
+		Node** GetBeforeAndAfterNode(Node*);
 
 };
 }

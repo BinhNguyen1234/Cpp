@@ -14,6 +14,7 @@ int main()
     Node* fourteen = new Node(14);
     Node* fifteen = new Node(15);
     Node* sixteen = new Node(16);
+    Node* notInLinkedList = new Node(20);
     a->PushValue(5);
     a->PushValue(6);
     a->PushValue(7);
@@ -26,9 +27,10 @@ int main()
     a->PushValue(fourteen);
     a->PushValue(fifteen);
     a->PushValue(sixteen);
+    a->DeleteFirstValue(12);
     a->PrintAllValue();
-    bool test = a->IsExist(sixteen);
-    std::cout << "test: " << test << std::endl;
+    Node** test = a->GetBeforeAndAfterNode(thirdteen);
+    std::cout << "test: " << test[0]->data << std::endl;
     std::cout << "ok";
 }
 
