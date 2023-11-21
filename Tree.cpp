@@ -33,8 +33,9 @@ void TreeNode::InsertDatas(list<int> a)
 }
 int TreeNode::GetHeight(TreeNode* node)
 {
+
 	if (node == nullptr) {
-		return 0;
+		return -1;
 	}
 	int left = 0;
 	int right = 0;
@@ -43,7 +44,7 @@ int TreeNode::GetHeight(TreeNode* node)
 
 		right = GetHeight(node->right) + 1;
 
-	return max(left, right);
+	return max(GetHeight(node->left), GetHeight(node->right)) + 1;
 }
 int TreeNode::GetHeight() {
 	return GetHeight(this);

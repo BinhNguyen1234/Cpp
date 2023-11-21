@@ -10,6 +10,12 @@ namespace BinhTreeNode {
 		TreeNode(int data) {
 			this->data = data;
 		}
+		TreeNode(list<int> datas) {
+			this->data = datas.front();
+			datas.pop_front();
+			this->InsertDatas(datas);
+		}
+
 	public: 
 		void InsertData(TreeNode* a, TreeNode* location);
 		void InsertDatas(list<int> a);

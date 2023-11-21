@@ -8,9 +8,9 @@ using namespace BinhTreeNode;
 using namespace std;
 int main()
 {
-    list<int> a = { 1,2,3,6,7,8,9};
-	TreeNode d = TreeNode(5);
-	d.InsertDatas(a);
+    list<int> a = { 3, 5, 2, 1, 4, 6, 7 };
+	TreeNode d = TreeNode(a);
+
 	int he = d.GetHeight();
 	cout << he;
 }
