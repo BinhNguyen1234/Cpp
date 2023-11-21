@@ -16,6 +16,9 @@
     <Filter Include="LinkedList">
       <UniqueIdentifier>{6a9f5779-55cf-4738-8d47-ba04eda65b6f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BTree">
+      <UniqueIdentifier>{5df99508-a4df-4504-8f43-a58f79a32720}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp">
@@ -26,6 +29,12 @@
     </ClCompile>
     <ClCompile Include="LinkedList.cpp">
       <Filter>LinkedList</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.h">
+      <Filter>BTree</Filter>
+    </ClCompile>
+    <ClCompile Include="Tree.cpp">
+      <Filter>BTree</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

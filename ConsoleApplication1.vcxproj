@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="Tree.cpp" />
+    <ClCompile Include="Tree.h" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
