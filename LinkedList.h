@@ -18,12 +18,12 @@ class LinkedList {
 	public:
 		Node* curNode = nullptr;
 		Node* head = nullptr;
-		Node* tail = nullptr;
 		LinkedList(int data) {
 			this->curNode = new Node(data);
 			this->head = curNode;
 		};
-		void AddNode(Node*);
+		void AddHead(Node*);
+		void AddHead(int);
 		void PrintHeadValue() {
 			std::cout << this->head;
 		};
@@ -37,6 +37,7 @@ class LinkedList {
 		void DeleteNode(Node*);
 		bool IsExist(int);
 		bool IsExist(Node*);
+		void Reverse();
 		static int CountNode(LinkedList*);
 		Node** GetBeforeAndAfterNode(Node*);
 		Node** GetBeforeAndAfterValue(int);

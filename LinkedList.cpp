@@ -8,8 +8,18 @@ void LinkedList::InsertAtFirst(Node* node) {
 	node->next = this->head;
 	this->head = node;
 };
-void LinkedList::AddNode(Node* node) {
-
+void LinkedList::AddHead(Node* node) {
+	if (node->next == nullptr) {
+		node->next = this->head;
+		this->head = node;
+	}
+}
+void LinkedList::AddHead(int value) {
+	Node* node = new Node(value);
+	if (node->next == nullptr) {
+		node->next = this->head;
+		this->head = node;
+	}
 }
 Node* LinkedList::findValue(int value) {
 	Node* current = this->head;
@@ -68,7 +78,22 @@ bool LinkedList::IsExist(int value) {
 	
 	return false;
 }
-bool LinkedList::IsExist(Node* value) {
+void LinkedList::Reverse() {
+	Node* pre;
+	Node* cur = this->head;
+	Node* next = cur->next;
+	while (next != nullptr) {
+		pre = cur;
+		cur = cur->next;
+		next = next->next;
+		cur->next = pre;
+		/*next = cur->next;
+		cur->next = pre;
+		pre = cur;
+		cur = next;*/
+	}
+}
+bool LinkedList::IsExist(Node* value) { 
 	if (this->head == nullptr) {
 		return false;
 	}
