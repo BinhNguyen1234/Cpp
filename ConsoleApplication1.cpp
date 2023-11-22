@@ -8,11 +8,8 @@ using namespace BinhTreeNode;
 using namespace std;
 int main()
 {
-    list<int> a = { 3, 5, 2, 1, 4, 6, 7 };
+    list<int> a = { 1,2,3,6,7,8,9};
 	TreeNode d = TreeNode(a);
-
-	int he = d.GetHeight();
-	cout << he;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
