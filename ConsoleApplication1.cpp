@@ -6,6 +6,14 @@
 #include <iostream>
 using namespace BinhTreeNode;
 using namespace std;
+struct StructTest {
+	public:
+		int a = 5;
+};
+class ClassTest {
+	public: 
+		int a = 5;
+};
 int main()
 {
     list<int> a = { 3, 5, 2, 1, 4, 6, 7 };
@@ -13,6 +21,16 @@ int main()
 
 	int he = d.GetHeight();
 	cout << he;
+	int x;
+	StructTest testStruct;
+	StructTest *testStructNew = new StructTest();
+	ClassTest testClass;
+	ClassTest* testClassNew = new ClassTest();
+	cout << testStruct.a;
+	cout << testStructNew->a;
+	cout << testClass.a;
+	cout << testClassNew->a;
+	cin >> x;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
