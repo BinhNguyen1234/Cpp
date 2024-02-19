@@ -1,5 +1,6 @@
 #include "Tree.h"
 #include <list>
+#include <iostream>
 using namespace std;
 using namespace BinhTreeNode;
 void TreeNode::InsertData(TreeNode* a, TreeNode* location) {
@@ -48,5 +49,25 @@ int TreeNode::GetHeight(TreeNode* node)
 }
 int TreeNode::GetHeight() {
 	return GetHeight(this);
+}
+void TreeNode::TopOfView(TreeNode* root) {
+	TreeNode* temp = root;
+
+	while (temp != nullptr) {
+
+		cout << temp->data;
+		if (temp->left != nullptr) {
+			temp = temp->left;
+			continue;
+		}
+		if (temp->right != nullptr) {
+			temp = temp->right;
+			continue;
+		}
+	}
+
+}
+void TreeNode::TopOfView() {
+	this->TopOfView(this);
 }
  

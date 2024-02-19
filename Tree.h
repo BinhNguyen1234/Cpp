@@ -20,7 +20,9 @@ namespace BinhTreeNode {
 		void InsertData(TreeNode* a, TreeNode* location);
 		void InsertDatas(list<int> a);
 		int GetHeight();
+		void TopOfView();
 	private:
+		void TopOfView(TreeNode*);
 		int GetHeight(TreeNode* node);
 		void InsertData(int a);
 	};
